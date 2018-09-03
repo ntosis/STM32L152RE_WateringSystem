@@ -36,6 +36,8 @@
 #include "rtc.h"
 #include <stdio.h>
 #include "stm32l1xx_hal.h"
+
+#include "oled.h"
 //#include "rtc.h"
 //#include "stm32l1xx_hal_msp.c"
 /* USER CODE BEGIN Includes */
@@ -252,6 +254,10 @@ void Task_500ms(void const *argument)
 
 
     			 putString("Hello world!");
+    			 char c[2]={SeeedOLED_Data_Mode,0xAA};
+
+    			 HAL_I2C_Master_Transmit(&hi2c1,SeeedOLED_Address,c,2,40);
+    			 //HAL_I2C_Master_Receive(&hi2c1,SeeedOLED_Address,c,2,40);
     			 //run every 1 second
 
     			/*##-3- Display the updated Time and Date ################################*/

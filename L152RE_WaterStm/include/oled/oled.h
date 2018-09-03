@@ -33,7 +33,7 @@
 #define HORIZONTAL_MODE                 02
 
 
-#define SeeedOLED_Address               (0x3c<<1U)
+#define SeeedOLED_Address               (0x3cU)
 #define SeeedOLED_Command_Mode          0x80
 #define SeeedOLED_Data_Mode             0x40
 #define SeeedOLED_Display_Off_Cmd       0xAE
